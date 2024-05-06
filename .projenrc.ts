@@ -6,6 +6,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   cdkVersion: '2.50.0',
   defaultReleaseBranch: 'main',
   jsiiVersion: '~5.4.0',
+  majorVersion: 1,
   name: 'aws-evidently-l2',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/flochaz/aws-evidently-l2.git',
