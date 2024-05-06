@@ -1,4 +1,5 @@
 import { awscdk } from 'projen';
+import { NpmAccess } from 'projen/lib/javascript';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Florian CHAZAL',
   authorAddress: 'florian.chazal@doriane.com',
@@ -8,6 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: 'aws-evidently-l2',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/flochaz/aws-evidently-l2.git',
+  npmAccess: NpmAccess.PUBLIC,
 
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
