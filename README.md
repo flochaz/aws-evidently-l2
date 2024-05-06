@@ -138,3 +138,8 @@ Let's see how we would use the construct library to replace AWS Console tasks of
     ],
     });
     ```
+
+
+    # Credits
+
+    @ljuti
