@@ -139,7 +139,29 @@ Let's see how we would use the construct library to replace AWS Console tasks of
     });
     ```
 
+## More
 
-    # Credits
+* If using feature flags in a web app, I strongly recommend looking at [@sebsto](https://github.com/sebsto/feature-flag-demo) example to deal with unauthenticated role and cognito ;)
+* DOn't forget to grant permissions to your role used to be able to leverage aws-sdk V3 and `BatchEvaluateFeatureCommand` and `EvaluateFeatureCommand`  to get the feature flags values. For instance in your cdk code : 
+    ```typescript
+    this.unauthenticatedRole.attachInlinePolicy(
+			new Policy(this, "EvidentlyPolicy", {
+				statements: [
+					new PolicyStatement({
+						actions: [
+							"evidently:EvaluateFeature",
+							"evidently:BatchEvaluateFeature",
+						],
+						resources: [
+							`arn:aws:evidently:${Stack.of(this).region}:${Stack.of(this).account}:project/${this.featureFlagStore.project.projectName}/feature/*`,
+						],
+						effect: Effect.ALLOW,
+					}),
+				],
+			})
+		);
+        ```
 
-    @ljuti
+# Credits
+
+@ljuti
