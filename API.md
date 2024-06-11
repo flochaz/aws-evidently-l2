@@ -1576,6 +1576,7 @@ const featureProps: FeatureProps = { ... }
 | <code><a href="#aws-evidently-l2.FeatureProps.property.featureName">featureName</a></code> | <code>string</code> | The name of the feature. |
 | <code><a href="#aws-evidently-l2.FeatureProps.property.project">project</a></code> | <code><a href="#aws-evidently-l2.IProject">IProject</a></code> | An Evidently Project that this feature belongs to. |
 | <code><a href="#aws-evidently-l2.FeatureProps.property.variations">variations</a></code> | <code><a href="#aws-evidently-l2.Variation">Variation</a>[]</code> | Variations. |
+| <code><a href="#aws-evidently-l2.FeatureProps.property.description">description</a></code> | <code>string</code> | Description. |
 | <code><a href="#aws-evidently-l2.FeatureProps.property.entityOverrides">entityOverrides</a></code> | <code><a href="#aws-evidently-l2.EntityOverride">EntityOverride</a>[]</code> | Entity overrides. |
 
 ---
@@ -1615,6 +1616,26 @@ public readonly variations: Variation[];
 Variations.
 
 ---
+
+##### `description`<sup>Optional</sup> <a name="description" id="aws-evidently-l2.FeatureProps.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+- *Default:* 
+
+Description.
+
+---
+
+*Example*
+
+```typescript
+'This is a feature'
+```
+
 
 ##### `entityOverrides`<sup>Optional</sup> <a name="entityOverrides" id="aws-evidently-l2.FeatureProps.property.entityOverrides"></a>
 
