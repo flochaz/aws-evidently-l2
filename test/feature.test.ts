@@ -16,16 +16,19 @@ describe('AWS Evidently Feature', () => {
       value: 'foo',
     });
 
+    const description = 'This is a new feature';
     new Feature(stack, 'NewFeature', {
       featureName: 'myNewFeature',
       project: project,
       variations: [variation],
+      description,
     });
 
     const template = Template.fromStack(stack);
     template.resourceCountIs('AWS::Evidently::Feature', 1);
     template.hasResourceProperties('AWS::Evidently::Feature', {
       Name: 'myNewFeature',
+      Description: description,
     });
   });
 

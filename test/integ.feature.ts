@@ -13,6 +13,7 @@ class FeatureStack extends cdk.Stack {
     const feature = new evidently.Feature(this, 'NewFeature', {
       project: project,
       featureName: 'newFeature',
+      description: 'This is a new feature',
       variations: [
         new evidently.Variation({
           variationName: 'defaultVariation',
