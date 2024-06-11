@@ -125,6 +125,15 @@ export interface FeatureProps {
 	 * @default -
 	 */
   readonly entityOverrides?: EntityOverride[];
+
+  /**
+   * Description
+   * @required false
+   * @default -
+   * @type string
+   * @example 'This is a feature'
+    */
+  readonly description?: string;
 }
 
 /**
@@ -186,6 +195,7 @@ export class Feature extends FeatureBase {
       entityOverrides: props.entityOverrides?.map((override) =>
         override._renderEntityOverride(),
       ),
+      description: props.description,
     });
 
     this.project = project;
